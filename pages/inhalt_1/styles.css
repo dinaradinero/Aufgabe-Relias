@@ -43,16 +43,16 @@ li {
 
 .card {
   display: flex;
-  flex-direction: column;
   aspect-ratio: 16 / 9;
-  position: relative;
-  width: 900px;
-  max-width: 960px;
+  flex-direction: column;
+  width: min(900px, 95vw);
+  min-height: 0;
   background-color: white;
   border-radius: 12px;
-  padding: 15px;
+  padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow: auto;
+  position: relative;
   gap: 10px;
 }
 

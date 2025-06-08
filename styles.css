@@ -46,7 +46,6 @@ li {
   align-items: center;
   flex-direction: column;
   width: min(900px, 95vw);
-  max-width: 960px;
   min-height: 0;
   background-color: white;
   border-radius: 12px;

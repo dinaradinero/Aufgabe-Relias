@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const review_text = document.getElementById("review-text");
   const next_button = document.getElementById("next_link");
   const retry_button = document.getElementById("retry_link");
+  const card = document.getElementById("card");
 
   let isAnswerCorrect = false;
 
@@ -44,11 +45,15 @@ document.addEventListener("DOMContentLoaded", () => {
       review_text.textContent = "Glückwunsch! Sie haben den Test bestanden!";
       next_button.removeAttribute("hidden");
       retry_button.setAttribute("hidden", true);
+      card.scrollTop = 0;
+      card.style.overflow = "hidden";
     } else {
       review_text.textContent =
         "Leider haben Sie den Test nicht bestanden. Versuchen Sie es noch einmal!";
       retry_button.removeAttribute("hidden");
       next_button.setAttribute("hidden", true);
+      card.scrollTop = 0;
+      card.style.overflow = "hidden";
     }
   });
 });

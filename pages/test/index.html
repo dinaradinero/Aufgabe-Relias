@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../test/index.js" defer></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Körperliche Veränderungen als Stressreaktion</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="card">
+        <div class="title">
+          <p class="title-content">Überprüfen Sie Ihr Wissen</p>
+        </div>
+        <h3>
+          Welche Grundannahme Peters über den Frühdienst am Montagmorgen kann
+          dazu geführt haben, dass er sich gestresst fühlte?
+        </h3>
+        <form class="form">
+          <label class="form-control">
+            <input
+              type="radio"
+              name="answer"
+              value="A"
+              class="input-radio"
+            />„Ich kann mit Chaos gut umgehen.“</label
+          >
+          <label class="form-control">
+            <input
+              type="radio"
+              name="answer"
+              value="B"
+              class="input-radio"
+            />„Frühdienste fallen mir schwer.“</label
+          >
+          <label class="form-control">
+            <input
+              type="radio"
+              name="answer"
+              value="C"
+              class="input-radio"
+            />„Mir machen Montage nichts aus.“
+          </label>
+          <div id="feedback"></div>
+          <button id="check_button">Antwort prüfen</button>
+          <button id="review_button" hidden>Ergebnis anzeigen</button>
+        </form>
+        <div id="review">
+          <p id="review-text"></p>
+          <div id="review-buttons">
+            <a id="next_link" href="../ende/index.html" hidden>
+              <button id="next_button">Weiter</button>
+            </a>
+            <a id="retry_link" href="index.html" hidden>
+              <button id="retry_button">Wiederholen</button>
+            </a>
+          </div>
+        </div>
+        <a class="zum-inhalt" href="../inhalt_1/index.html">
+          <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

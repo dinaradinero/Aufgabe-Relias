@@ -45,14 +45,30 @@ li {
   aspect-ratio: 16 / 9;
   align-items: center;
   flex-direction: column;
-  width: 900px;
+  width: min(900px, 95vw);
   max-width: 960px;
+  min-height: 0;
   background-color: white;
   border-radius: 12px;
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow: auto;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 95vw;
+    padding: 20px 15px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  a.zum-kursinhalt {
+    width: 10rem;
+  }
 }
 
 .title {

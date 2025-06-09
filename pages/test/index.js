@@ -1,13 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const check_button = document.getElementById("check_button");
-  const review_button = document.getElementById("review_button");
-  const feedback = document.getElementById("feedback");
-  const review = document.getElementById("review");
-  const review_text = document.getElementById("review-text");
-  const next_button = document.getElementById("next_link");
-  const retry_button = document.getElementById("retry_link");
-  const card = document.getElementById("card");
+const check_button = document.getElementById("check_button");
+const review_button = document.getElementById("review_button");
+const feedback = document.getElementById("feedback");
+const review = document.getElementById("review");
+const review_text = document.getElementById("review-text");
+const next_button = document.getElementById("next_link");
+const retry_button = document.getElementById("retry_link");
+const card = document.getElementById("card");
 
+document.addEventListener("DOMContentLoaded", () => {
   let isAnswerCorrect = false;
 
   check_button.addEventListener("click", function (event) {

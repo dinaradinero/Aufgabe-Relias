@@ -96,6 +96,7 @@ li {
 details {
   background-color: #2196f3;
   width: 100%;
+  transition: background 0.3s ease;
 }
 
 details[open] {
@@ -115,7 +116,8 @@ details[open] summary {
   font-weight: bold;
 }
 
-.image-box-koerperhaltung {
+.image-box-koerperhaltung,
+.image-box-bewegung {
   display: none;
   padding-left: 5px;
 }
@@ -127,152 +129,71 @@ details[open] summary {
   padding-left: 25px;
 }
 
-.image-box-bewegung {
-  display: none;
-  padding-left: 5px;
-}
-
-.content-image-koerperhaltung {
-  border-radius: 5px;
-  max-height: 100%;
-}
-
+.content-image-koerperhaltung,
 .content-image-bewegung {
   border-radius: 5px;
   max-height: 100%;
 }
+
 details {
   border-radius: 5px;
   color: white;
   cursor: pointer;
 }
 
-a {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  vertical-align: middle;
-  text-decoration: none;
-  background: transparent;
-  padding: 15px 15px 5px 15px;
-  font-size: inherit;
-  font-family: inherit;
-}
-
 a.zum-test {
-  width: 5rem;
-  height: auto;
-}
-
-a.zum-test .circle {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: relative;
-  display: block;
-  margin: 0;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 3rem;
   height: 3rem;
+  border-radius: 50%;
   background: #282936;
-  border-radius: 1.625rem;
-}
-
-a.zum-test .circle .icon {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  background: #fff;
-}
-
-a.zum-test .circle .icon.arrow {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  left: 0.625rem;
-  width: 1.125rem;
-  height: 0.125rem;
-  background: none;
-}
-
-a.zum-test .circle .icon.arrow::before {
-  position: absolute;
-  content: "";
-  top: -0.29rem;
-  right: 0.0625rem;
-  width: 0.625rem;
-  height: 0.625rem;
-  border-top: 0.125rem solid #fff;
-  border-right: 0.125rem solid #fff;
-  transform: rotate(45deg);
-}
-
-a:hover .circle {
-  background: grey;
-  color: #282936;
-}
-
-a.zum-start {
-  width: 5rem;
-  height: auto;
-}
-
-a.zum-start .circle {
-  position: relative;
-  display: block;
-  margin: 0;
-  width: 3rem;
-  height: 3rem;
-  background: #282936;
-  border-radius: 1.62rem;
-}
-
-a.zum-start .circle .icon {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  background: #fff;
-}
-
-a.zum-start .circle .icon.arrow {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  left: 0.625rem;
-  width: 1.125rem;
-  height: 0.125rem;
-  background: none;
-}
-
-a.zum-start .circle .icon.arrow::before {
-  position: absolute;
-  content: "";
-  top: -0.29rem;
-  right: 0.0625rem;
-  width: 0.625rem;
-  height: 0.625rem;
-  border-top: 0.125rem solid #fff;
-  border-left: 0.125rem solid #fff;
-  transform: rotate(315deg);
-}
-
-a:hover .circle {
-  background: grey;
-  color: #282936;
-}
-
-a.zum-start {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: inline-block;
   cursor: pointer;
-  outline: none;
-  border: 0;
-  vertical-align: middle;
   text-decoration: none;
-  background: transparent;
-  padding: 15px 15px 5px 15px;
-  font-size: inherit;
-  font-family: inherit;
+  transition: background 0.3s ease;
+}
+
+a.zum-test:hover,
+a.zum-start:hover {
+  background: grey;
+}
+
+a.zum-test::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  transform: rotate(135deg);
+}
+
+a.zum-start {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: #282936;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+a.zum-start::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  transform: rotate(-45deg);
 }
